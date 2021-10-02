@@ -16,11 +16,11 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-$(document).click( function(e){
+$(menu_item).click( function(e){
     if ( $(e.target).closest('.menu_item').length ) {
         // клик внутри элемента 
         return;
     }
     // клик снаружи элемента 
-    $('.menu').fadeOut();
+    $('.menu_item').fadeOut();
 });
