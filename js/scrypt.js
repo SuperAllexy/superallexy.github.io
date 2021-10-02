@@ -15,12 +15,12 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
-
-$(menu_item).click( function(e){
-    if ( $(e.target).closest('.menu_item').length ) {
-        // клик внутри элемента 
-        return;
-    }
-    // клик снаружи элемента 
-    $('.menu_item').fadeOut();
+jQuery(function($){
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".menu_item"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+			div.hide(); // скрываем его
+		}
+	});
 });
