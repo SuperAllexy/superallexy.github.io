@@ -22,5 +22,5 @@ $(document).click( function(e){
         return;
     }
     // клик снаружи элемента 
-    $('.menu_item').fadeOut();
+    $('.menu').fadeOut();
 });
