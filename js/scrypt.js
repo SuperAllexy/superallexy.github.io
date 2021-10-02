@@ -15,3 +15,12 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
+
+$(document).click( function(e){
+    if ( $(e.target).closest('.menu_item').length ) {
+        // клик внутри элемента 
+        return;
+    }
+    // клик снаружи элемента 
+    $('.menu_item').fadeOut();
+});
